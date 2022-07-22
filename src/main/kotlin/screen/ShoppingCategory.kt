@@ -18,7 +18,8 @@ class ShoppingCategory {
             // TODO 1. 장바구니 이동
         } else {
             if (categories.contains(selectedCategory)) {
-                // TODO 2. 카테고리 상품 목록 보여주기
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProducts(selectedCategory)
             } else {
                 showErrorMessage(selectedCategory)
             }
@@ -27,6 +28,6 @@ class ShoppingCategory {
 
     private fun showErrorMessage(selectedCategory: String?) {
         print("[$selectedCategory] : 존재하지 않는 카테고리 입니다. 다시 입력해주세요.")
-        showCategories()
+        showCategories() // 사용자가 카테고리 목록에 없는 값을 입력했으니 다시 입력을 요청하는것이 사용자 친화적인 ux
     }
 }
