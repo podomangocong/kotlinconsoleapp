@@ -9,7 +9,7 @@ class ShoppingCategory : Screen() {
         for (category in categories) {
             println(category)
         }
-        println("-> 장바구니로 이동하시려면 #을 입력해주세요")
+        println("-> 장바구니로 이동하시려면 #을 입력해주세")
 
         val selectedCategory = readLine().getNotEmptyString()
         if (selectedCategory == "#") {
